@@ -28,15 +28,20 @@ nav a {
   padding: 10px;
 }
 
+.container {
+  max-width: 1440px;
+  width: 90%;
+  margin: 0 auto;
+}
+
 form {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 350px;
-  height: 150px;
   margin: 30px auto;
-  padding: 50px;
+  padding: 20px 50px;
   background-color: #fff;
   border-radius: 10px;
 }
@@ -47,14 +52,64 @@ label {
   margin: 10px 0;
 }
 
-form span {
+form h2 {
   font-size: 24px;
   font-weight: 600;
-  margin: 20px 0;
 }
 
 form input {
   margin-left: 10px;
   padding: 5px;
+  border: 1px solid;
   border-radius: 5px;
+}
+
+form button {
+  width: 50%;
+  margin: 10px auto;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: forestgreen;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+}
+
+form button:hover {
+  background-color: darkgreen;
+}
+
+ul {
+  margin: 40px 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+li.user-card {
+  max-width: 250px;
+  min-width: 200px;
+  width: 20%;
+  margin: 0 10px 10px 0;
+  border-radius: 10px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+li.user-card a {
+  padding: 20px;
+  color: #000;
+  transition: background-color .1s linear;
+}
+
+li.user-card a:hover {
+  border-radius: 10px;
+  background-color: rgb(235, 225, 225);
+}
+
+li.user-card span {
+  display: block;
 }

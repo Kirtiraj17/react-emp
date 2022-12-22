@@ -1,12 +1,11 @@
-import React from 'react';
-import Form from '../components/Form';
+import Form from "../components/Form";
 
-function RegisterUser() {
+function RegisterUser({empData, setEmpData, submitHandlerPost}) {
   return (
     <div>
-      <Form />
+      <Form empData={empData} setEmpData={setEmpData} submitHandlerPost={submitHandlerPost} />
     </div>
-  )
+  );
 }
 
 export default RegisterUser;
