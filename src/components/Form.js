@@ -1,12 +1,22 @@
+import { useEffect } from "react";
+
 function Form({ empData, setEmpData, submitHandlerPost, submitHandlerUpdate }) {
   const route = window.location.href;
   let submitHandler;
-  if(route === 'http://localhost:3000/register') {
+  if (route === "http://localhost:3000/register") {
     submitHandler = submitHandlerPost;
-    console.log('first')
+    // console.log("/register");
   } else {
     submitHandler = submitHandlerUpdate;
   }
+
+  useEffect(() => {
+    setEmpData({
+      emp_name: "",
+      emp_age: "",
+      emp_salary: "",
+    });
+  }, [route]);
 
   return (
     <form onSubmit={submitHandler}>
